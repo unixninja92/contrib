@@ -6,10 +6,16 @@ Upstream source
 :	The build scripts get these from upstream. These are established projects
 	and most OS distributions will have them in their package repository.
 
-	- wrapper
 	- bdb-je
 	- db4o
 	- commons-compress
+
+Modified upstream source
+: The build scripts get these from upstream, but use a custom build script for
+	64 bit windows. These are established projects and most OS distributions will
+	have them in their package repository.
+
+		- wrapper
 
 Mirrored source
 :	The build scripts get these from the freenet servers, but they have not
@@ -45,6 +51,13 @@ requires maven 3)
 The build script compiles all the locally-maintained packages, and collects
 them into freenet-ext.jar. It then retrieves all the remote source packages,
 and builds those.
+
+## Notes on modified upstream libraries
+
+[wrapper]
+
+A custom 64 bit Windows build script was added. Modifications are based on
+https://www.krenger.ch/blog/java-service-wrapper-3-5-28-for-windows-x64/
 
 ## Notes on locally maintained libraries
 
